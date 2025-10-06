@@ -102,6 +102,6 @@ print(f"Energía total: {energia:.2f}")
 
 ![SEÑAL DE VOZ MUJER](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/se%C3%B1al%20de%20voz%20mujer.PNG?raw=true)
 
-![ESPECTRO DE MAGNITUDES]()
+![ESPECTRO DE MAGNITUDES](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/espectro%20magnitudes%20mujer.PNG?raw=true)
 
 ![RESULTADO CARACTERISTICAS]()
