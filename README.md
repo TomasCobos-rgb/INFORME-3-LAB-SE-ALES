@@ -187,6 +187,6 @@ plt.show()
 
 ```
 ### RESULTADOS OBTENIDOS
-![SEÑAL DE VOZ MUJER FILTRADA]()
+![SEÑAL DE VOZ MUJER FILTRADA](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/se%C3%B1al%20filtrada%20mujer.PNG?raw=true)
 
 ![SEÑAL DE VOZ MUJER]()
