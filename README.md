@@ -197,3 +197,5 @@ En este caso lo unico que cambia respecto al codigo anterior es la siguiente lin
 voz_filtrada = lfilter(b_hombre, 1, data)
 ```
 ![SEÑAL DE VOZ HOMBRE FILTRADA](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/SE%C3%91AL%20DE%20VOZ%20HOMRE%20FILTRADA.PNG?raw=true)
+
+### COMPARACION Y CONCUSIONES
