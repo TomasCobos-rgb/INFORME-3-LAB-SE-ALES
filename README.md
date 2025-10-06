@@ -104,4 +104,4 @@ print(f"Energía total: {energia:.2f}")
 
 ![ESPECTRO DE MAGNITUDES](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/espectro%20magnitudes%20mujer.PNG?raw=true)
 
-![RESULTADO CARACTERISTICAS]()
+![RESULTADO CARACTERISTICAS](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/caracteristicas%20rta%20mujer.PNG?raw=true)
