@@ -298,4 +298,5 @@ print("\nResultados guardados en 'resultados_jitter_shimmer.csv'")
 
 ![RESUTALDOS SHIMMER Y JITTER](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/RESULTADOS%20SHIMMER%20Y%20JITTER.PNG?raw=true)
 
-### COMPARACION Y CONCUSIONES
+###  PARTE C.
+####  COMPARACION Y CONCUSIONES
