@@ -90,3 +90,10 @@ print(f"Frecuencia media: {freq_mean:.2f} Hz")
 print(f"Brillo espectral: {brillo:.2f} Hz")
 print(f"Energía total: {energia:.2f}")
 ```
+
+### RESULTADOS OBTENIDOS PARA HOMBRE
+![SEÑAL DE VOZ HOMBRE]()
+
+![ESPECTRO DE MAGNITUDES]()
+
+![RESULTADO CARACTERISTICAS]()
