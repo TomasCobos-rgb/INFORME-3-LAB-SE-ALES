@@ -189,4 +189,12 @@ plt.show()
 ### RESULTADOS OBTENIDOS
 ![SEÑAL DE VOZ MUJER FILTRADA](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/se%C3%B1al%20filtrada%20mujer.PNG?raw=true)
 
-![SEÑAL DE VOZ MUJER]()
+En este caso lo unico que cambia respecto al codigo anterior es la siguiente linea: 
+
+```python
+# =========================================================
+# 4. Aplicar el filtro (ejemplo con el femenino)
+# =========================================================
+voz_filtrada = lfilter(b_hombre, 1, data)
+```
+![SEÑAL DE VOZ HOMBRE FILTRADA](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/SE%C3%91AL%20DE%20VOZ%20HOMRE%20FILTRADA.PNG?raw=true)
