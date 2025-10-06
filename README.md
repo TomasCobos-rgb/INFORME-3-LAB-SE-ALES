@@ -118,50 +118,75 @@ Posteriormente, se evalúan las variaciones temporales y de amplitud de las señ
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.io import wavfile
-from scipy.signal import butter, lfilter
+from scipy.signal import firwin, lfilter, freqz
 
-# 1. Leer el archivo de voz
-fs, data = wavfile.read("/content/drive/MyDrive/arxhivos wav/MUJER-3_1.wav")   # tu archivo de voz
-data = data.astype(float)            # convertir a float
+# =========================================================
+# 1. Leer el archivo de audio
+# =========================================================
+fs, data = wavfile.read("MUJER-1.wav")   # Cambia por tu archivo de voz
 
-# Si el audio es estéreo, tomamos un canal
+# Si el audio está en estéreo, tomar un solo canal
 if data.ndim > 1:
     data = data[:,0]
 
-# 2. Definir el filtro pasabanda
-def butter_bandpass(lowcut, highcut, fs, order=6):
-    nyq = 0.5 * fs
-    low = lowcut / nyq
-    high = highcut / nyq
-    from scipy.signal import butter
-    b, a = butter(order, [low, high], btype='band')
-    return b, a
+# Convertir a float y normalizar
+data = data.astype(float)
+if data.dtype == np.int16:
+    data = data / 32768.0
 
-def butter_bandpass_filter(data, lowcut, highcut, fs, order=6):
-    b, a = butter_bandpass(lowcut, highcut, fs, order)
-    y = lfilter(b, a, data)
-    return y
+# =========================================================
+# 2. Parámetros del filtro FIR
+# =========================================================
+orden = 220
+ventana = 'blackman'
 
-# 3. Aplicar el filtro (300–3400 Hz típico de voz telefónica)
-voz_filtrada = butter_bandpass_filter(data, 300.0, 3400.0, fs, order=6)
+# --- Filtro pasa-banda para voz masculina ---
+f_low_h = 80
+f_high_h = 400
 
-# 4. Guardar el resultado
-wavfile.write("MUJER-3_1.wav", fs, voz_filtrada.astype(np.int16))
+# --- Filtro pasa-banda para voz femenina ---
+f_low_m = 150
+f_high_m = 500
 
-# 5. (Opcional) Graficar señal original y filtrada
-t = np.linspace(0, len(data)/fs, num=len(data))
+# =========================================================
+# 3. Diseño de los filtros FIR
+# =========================================================
+b_hombre = firwin(numtaps=orden+1, cutoff=[f_low_h, f_high_h],
+                  window=ventana, pass_zero=False, fs=fs)
 
-plt.figure(figsize=(12,6))
-plt.subplot(2,1,1)
-plt.subplot(2,1,2)
-plt.plot(t, data)
-plt.title("Señal original")
+b_mujer = firwin(numtaps=orden+1, cutoff=[f_low_m, f_high_m],
+                 window=ventana, pass_zero=False, fs=fs)
+
+
+# =========================================================
+# 4. Aplicar el filtro (ejemplo con el femenino)
+# =========================================================
+voz_filtrada = lfilter(b_mujer, 1, data)
+
+# Guardar resultado
+wavfile.write("voz_filtrada_femenina.wav", fs, (voz_filtrada * 32768).astype(np.int16))
+
+# =========================================================
+# 5. Visualizar señal original y filtrada (superpuestas)
+# =========================================================
+t = np.linspace(0, len(data)/fs, len(data))
+
+plt.figure(figsize=(12,5))
+plt.plot(t, data, color='gray', alpha=0.6, label='Señal original')
+plt.plot(t, voz_filtrada, color='red', linewidth=1.2, label='Señal filtrada (150–500 Hz)')
+plt.title("Comparación de señal original y filtrada (superpuestas)")
 plt.xlabel("Tiempo [s]")
-
-plt.plot(t, voz_filtrada, color="red")
-plt.title("Señal filtrada (300–3400 Hz)")
-plt.xlabel("Tiempo [s]")
+plt.ylabel("Amplitud")
+plt.legend()
+plt.grid(True)
 plt.tight_layout()
 plt.show()
 
+# =========================================================
+
+
 ```
+### RESULTADOS OBTENIDOS
+![SEÑAL DE VOZ MUJER FILTRADA]()
+
+![SEÑAL DE VOZ MUJER]()
