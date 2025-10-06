@@ -105,3 +105,63 @@ print(f"Energía total: {energia:.2f}")
 ![ESPECTRO DE MAGNITUDES](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/espectro%20magnitudes%20mujer.PNG?raw=true)
 
 ![RESULTADO CARACTERISTICAS](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/caracteristicas%20rta%20mujer.PNG?raw=true)
+
+### PARTE B – Medición de Jitter y Shimmer 
+
+En esta sección se realiza un análisis detallado de la estabilidad de la voz a partir de las grabaciones obtenidas en la Parte A. Se selecciona una muestra de voz masculina y una femenina, a las cuales se aplica un filtro pasa–banda FIR dentro del rango típico de frecuencias de cada género (80–400 Hz para hombres y 150–500 Hz para mujeres) con el fin de eliminar componentes de ruido no deseados.
+
+Posteriormente, se evalúan las variaciones temporales y de amplitud de las señales de voz mediante el cálculo del Jitter (fluctuación en la frecuencia fundamental entre ciclos consecutivos) y el Shimmer (variación en la amplitud pico a pico). Estos parámetros permiten cuantificar la regularidad de la vibración de las cuerdas vocales y, por tanto, sirven como indicadores de calidad y estabilidad vocal.
+
+### PARTA B.1
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.io import wavfile
+from scipy.signal import butter, lfilter
+
+# 1. Leer el archivo de voz
+fs, data = wavfile.read("/content/drive/MyDrive/arxhivos wav/MUJER-3_1.wav")   # tu archivo de voz
+data = data.astype(float)            # convertir a float
+
+# Si el audio es estéreo, tomamos un canal
+if data.ndim > 1:
+    data = data[:,0]
+
+# 2. Definir el filtro pasabanda
+def butter_bandpass(lowcut, highcut, fs, order=6):
+    nyq = 0.5 * fs
+    low = lowcut / nyq
+    high = highcut / nyq
+    from scipy.signal import butter
+    b, a = butter(order, [low, high], btype='band')
+    return b, a
+
+def butter_bandpass_filter(data, lowcut, highcut, fs, order=6):
+    b, a = butter_bandpass(lowcut, highcut, fs, order)
+    y = lfilter(b, a, data)
+    return y
+
+# 3. Aplicar el filtro (300–3400 Hz típico de voz telefónica)
+voz_filtrada = butter_bandpass_filter(data, 300.0, 3400.0, fs, order=6)
+
+# 4. Guardar el resultado
+wavfile.write("MUJER-3_1.wav", fs, voz_filtrada.astype(np.int16))
+
+# 5. (Opcional) Graficar señal original y filtrada
+t = np.linspace(0, len(data)/fs, num=len(data))
+
+plt.figure(figsize=(12,6))
+plt.subplot(2,1,1)
+plt.subplot(2,1,2)
+plt.plot(t, data)
+plt.title("Señal original")
+plt.xlabel("Tiempo [s]")
+
+plt.plot(t, voz_filtrada, color="red")
+plt.title("Señal filtrada (300–3400 Hz)")
+plt.xlabel("Tiempo [s]")
+plt.tight_layout()
+plt.show()
+
+```
