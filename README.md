@@ -198,4 +198,104 @@ voz_filtrada = lfilter(b_hombre, 1, data)
 ```
 ![SEÑAL DE VOZ HOMBRE FILTRADA](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/SE%C3%91AL%20DE%20VOZ%20HOMRE%20FILTRADA.PNG?raw=true)
 
+### PARTE B.2 
+#### PROCEDIMIENTO 
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.io import wavfile
+from scipy.signal import find_peaks
+import pandas as pd
+
+# =========================================================
+# Función para calcular jitter y shimmer
+# =========================================================
+def calcular_jitter_shimmer(ruta_archivo, graficar=False):
+    fs, data = wavfile.read(ruta_archivo)
+    data = data.astype(float)
+
+    # Normalizar a [-1, 1]
+    if data.dtype == np.int16:
+        data = data / 32768.0
+    if data.ndim > 1:
+        data = data[:, 0]
+
+    # Detectar picos principales (vibraciones)
+    peaks, _ = find_peaks(data, height=0, distance=fs/500)
+
+    if len(peaks) < 3:
+        return 0, 0, 0, 0
+
+    tiempos = peaks / fs
+    Ti = np.diff(tiempos)       # Periodos sucesivos
+    Ai = data[peaks]            # Amplitudes en los picos
+
+    # Jitter
+    N = len(Ti)
+    jitter_abs = np.sum(np.abs(Ti[:-1] - Ti[1:])) / (N - 1)
+    jitter_rel = (jitter_abs / np.mean(Ti)) * 100
+
+    # Shimmer
+    M = len(Ai)
+    shimmer_abs = np.sum(np.abs(Ai[:-1] - Ai[1:])) / (M - 1)
+    shimmer_rel = (shimmer_abs / np.mean(Ai)) * 100
+
+    # Graficar si se desea
+    if graficar:
+        t = np.arange(len(data)) / fs
+        plt.figure(figsize=(12, 5))
+        plt.plot(t, data, color='gray', label='Señal de voz')
+        plt.plot(peaks/fs, data[peaks], 'ro', label='Picos detectados')
+        plt.title(f'Picos de vibración - {ruta_archivo}')
+        plt.xlabel('Tiempo [s]')
+        plt.ylabel('Amplitud')
+        plt.legend()
+        plt.tight_layout()
+        plt.show()
+
+    return jitter_abs, jitter_rel, shimmer_abs, shimmer_rel
+
+
+# =========================================================
+# 2. Archivos a analizar
+# =========================================================
+archivos = [
+    "HOMBRE-1.wav",
+    "HOMBRE-2.wav",
+    "HOMBRE-3.wav",
+    "MUJER-1.wav",
+    "MUJER-2_1.wav",
+    "MUJER-3_1.wav"
+]
+
+# =========================================================
+# 3. Calcular y almacenar resultados
+# =========================================================
+resultados = []
+for archivo in archivos:
+    jitter_abs, jitter_rel, shimmer_abs, shimmer_rel = calcular_jitter_shimmer(archivo)
+    resultados.append({
+        "Archivo": archivo,
+        "Jitter_abs (s)": jitter_abs,
+        "Jitter_rel (%)": jitter_rel,
+        "Shimmer_abs": shimmer_abs,
+        "Shimmer_rel (%)": shimmer_rel
+    })
+
+# Convertir a DataFrame para visualizar tabla
+df_resultados = pd.DataFrame(resultados)
+print("\n=== RESULTADOS DE JITTER Y SHIMMER ===")
+print(df_resultados.round(6))
+
+# =========================================================
+# 4. (Opcional) Guardar resultados en CSV
+# =========================================================
+df_resultados.to_csv("resultados_jitter_shimmer.csv", index=False)
+print("\nResultados guardados en 'resultados_jitter_shimmer.csv'")
+```
+
+### RESULTADOS SHIMMER Y JITTER
+
+![RESUTALDOS SHIMMER Y JITTER]()
+
 ### COMPARACION Y CONCUSIONES
