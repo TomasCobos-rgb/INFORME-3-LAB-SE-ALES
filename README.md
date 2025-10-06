@@ -189,8 +189,7 @@ plt.show()
 ### RESULTADOS OBTENIDOS
 ![SEÑAL DE VOZ MUJER FILTRADA](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/se%C3%B1al%20filtrada%20mujer.PNG?raw=true)
 
-En este caso lo unico que cambia respecto al codigo anterior es la siguiente linea, la cual se encarga de aplicar el filtro, en este caso estamos tratando con una voz de hombre: 
-
+En este caso lo unico que cambia respecto al codigo anterior es la siguiente linea, la cual se encarga de aplicar el filtro a una voz de hombre: 
 ```python
 # =========================================================
 # 4. Aplicar el filtro (ejemplo con el femenino)
