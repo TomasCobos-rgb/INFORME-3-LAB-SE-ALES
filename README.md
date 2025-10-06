@@ -96,4 +96,4 @@ print(f"Energía total: {energia:.2f}")
 
 ![ESPECTRO DE MAGNITUDES](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/ESPECTRO%20DE%20MAGNITUDES%20HOMBRE.PNG?raw=true)
 
-![RESULTADO CARACTERISTICAS]()
+![RESULTADO CARACTERISTICAS](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/CARACTERISTICAS%20DE%20LA%20VOZ.PNG?raw=true)
