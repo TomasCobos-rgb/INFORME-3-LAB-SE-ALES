@@ -100,7 +100,7 @@ print(f"Energía total: {energia:.2f}")
 
 ### RESULTADOS OBTENIDOS PARA MUJER
 
-![SEÑAL DE VOZ MUJER]()
+![SEÑAL DE VOZ MUJER](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/se%C3%B1al%20de%20voz%20mujer.PNG?raw=true)
 
 ![ESPECTRO DE MAGNITUDES]()
 
