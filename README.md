@@ -300,3 +300,6 @@ print("\nResultados guardados en 'resultados_jitter_shimmer.csv'")
 
 ###  PARTE C.
 ####  COMPARACION Y CONCUSIONES
+En esta sección se realiza la comparación de los resultados obtenidos entre las voces masculinas y femeninas analizadas previamente. Se examinan diferencias en la frecuencia fundamental, el brillo, la frecuencia media y la intensidad, con el fin de identificar las características acústicas que distinguen ambos tipos de voz.
+
+Además, se discute la importancia clínica de los parámetros de Jitter y Shimmer, los cuales permiten evaluar la estabilidad y regularidad de la producción vocal. Estos indicadores son especialmente útiles en el diagnóstico de alteraciones fonatorias y en el seguimiento terapéutico de pacientes con trastornos de la voz.
