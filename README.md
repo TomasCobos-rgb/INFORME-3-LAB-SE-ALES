@@ -159,7 +159,7 @@ b_mujer = firwin(numtaps=orden+1, cutoff=[f_low_m, f_high_m],
 
 
 # =========================================================
-# 4. Aplicar el filtro (ejemplo con el femenino)
+# 4. Aplicar el filtro
 # =========================================================
 voz_filtrada = lfilter(b_mujer, 1, data)
 
@@ -192,7 +192,7 @@ plt.show()
 En este caso lo unico que cambia respecto al codigo anterior es la siguiente linea, la cual se encarga de aplicar el filtro a una voz de hombre: 
 ```python
 # =========================================================
-# 4. Aplicar el filtro (ejemplo con el femenino)
+# 4. Aplicar el filtro 
 # =========================================================
 voz_filtrada = lfilter(b_hombre, 1, data)
 ```
