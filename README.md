@@ -92,7 +92,7 @@ print(f"Energía total: {energia:.2f}")
 ```
 
 ### RESULTADOS OBTENIDOS PARA HOMBRE
-![SEÑAL DE VOZ HOMBRE]()
+![SEÑAL DE VOZ HOMBRE](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/SE%C3%91AL%20DE%20VOZ%20HOMBRE.PNG?raw=true)
 
 ![ESPECTRO DE MAGNITUDES]()
 
