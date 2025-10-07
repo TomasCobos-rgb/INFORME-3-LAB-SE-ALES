@@ -114,6 +114,9 @@ En esta sección se realiza un análisis detallado de la estabilidad de la voz a
 
 Posteriormente, se evalúan las variaciones temporales y de amplitud de las señales de voz mediante el cálculo del Jitter (fluctuación en la frecuencia fundamental entre ciclos consecutivos) y el Shimmer (variación en la amplitud pico a pico). Estos parámetros permiten cuantificar la regularidad de la vibración de las cuerdas vocales y, por tanto, sirven como indicadores de calidad y estabilidad vocal.
 
+## Diagrama de flujo
+![Diagrama Parte A](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/Beige%20Minimal%20Flowchart%20Infographic%20Graph%20(1).png?raw=true)
+
 ### PARTA B.1
 
 ```python
