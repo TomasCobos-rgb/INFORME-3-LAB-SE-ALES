@@ -25,6 +25,8 @@ De cada señal se obtuvieron los siguientes parámetros:
 
 Estos valores permiten comparar las características acústicas entre voces masculinas y femeninas y servirán como base para los análisis posteriores.
 
+## Diagrama de flujo
+![Diagrama Parte A](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/Beige%20Minimal%20Flowchart%20Infographic%20Graph.png?raw=true)
 ### PROCEDIMIENTO 
 ```python
 import numpy as np
