@@ -300,13 +300,13 @@ print("\nResultados guardados en 'resultados_jitter_shimmer.csv'")
 
 ###  PARTE C.
 ####  COMPARACIÓN Y CONCUSIONES
-En esta sección se realiza la comparación de los resultados obtenidos entre las voces masculinas y femeninas analizadas previamente. Se examinan diferencias en la frecuencia fundamental, el brillo, la frecuencia media y la intensidad, con el fin de identificar las características acústicas que distinguen ambos tipos de voz.
+En esta sección se realiza la comparación de los resultados obtenidos entre las voces masculinas y femeninas analizadas previamente. Se observan diferencias en la frecuencia fundamental, el brillo, la frecuencia media y la intensidad, con el fin de identificar las características acústicas que distinguen ambos tipos de voz.
 
 Además, se discute la importancia clínica de los parámetros de Jitter y Shimmer, los cuales permiten evaluar la estabilidad y regularidad de la producción vocal. Estos indicadores son especialmente útiles en el diagnóstico de alteraciones fonatorias y en el seguimiento terapéutico de pacientes con trastornos de la voz.
 
 - ¿Qué diferencias se observan en la frecuencia fundamental?:
 En las mediciones realizadas se analiza que la frecuencia fundamental (F₀) de la voz masculina (HOMBRE-1) fue de 227.79 Hz, mientras que la de la voz femenina (MUJER-2) alcanzó 447.75 Hz.
-Esto significa que la voz de la mujer vibra aproximadamente el doble de rápido que la del hombre. Esto quiere decir que la diferencia se debe a las características anatómicas de las cuerdas vocales de cada género: las de los hombres son más largas y gruesas, produciendo vibraciones más lentas y tonos más graves; mientras que las de las mujeres son más cortas y delgadas, generando una vibración más rápida y, por lo tanto, un tono más agudo.
+Estos resultados señalan que la voz de la mujer vibra aproximadamente el doble de rápido que la del hombre. Esto quiere decir que la diferencia se debe a las características anatómicas de las cuerdas vocales de cada género: las de los hombres son más largas y gruesas, produciendo vibraciones más lentas y tonos más graves; mientras que las de las mujeres son más cortas y delgadas, generando una vibración más rápida y, por lo tanto, un tono más agudo. Además de que tipicamente la voz masculina se encuentra entre el rango de 80Hz a 150Hz, mientras que la voz femenina se encuentra entre el rango de 180Hz a 260Hz, lo cual nos da a entender que los resultados obtenidos poseen la trayectoria correcta.
 
 - ¿Qué otras diferencias notan en términos de brillo, media o intensidad?:
 En cuanto al brillo espectral y la frecuencia media, la voz masculina presentó valores de 2703.02 Hz, mientras que la femenina mostró 1653.18 Hz.
