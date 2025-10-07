@@ -299,28 +299,28 @@ print("\nResultados guardados en 'resultados_jitter_shimmer.csv'")
 ![RESUTALDOS SHIMMER Y JITTER](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/RESULTADOS%20SHIMMER%20Y%20JITTER.PNG?raw=true)
 
 ###  PARTE C.
-####  COMPARACION Y CONCUSIONES
+####  COMPARACIÓN Y CONCUSIONES
 En esta sección se realiza la comparación de los resultados obtenidos entre las voces masculinas y femeninas analizadas previamente. Se examinan diferencias en la frecuencia fundamental, el brillo, la frecuencia media y la intensidad, con el fin de identificar las características acústicas que distinguen ambos tipos de voz.
 
 Además, se discute la importancia clínica de los parámetros de Jitter y Shimmer, los cuales permiten evaluar la estabilidad y regularidad de la producción vocal. Estos indicadores son especialmente útiles en el diagnóstico de alteraciones fonatorias y en el seguimiento terapéutico de pacientes con trastornos de la voz.
 
-- ¿Qué diferencias se observan en la frecuencia fundamental?
+- ¿Qué diferencias se observan en la frecuencia fundamental?:
 En las mediciones realizadas se analiza que la frecuencia fundamental (F₀) de la voz masculina (HOMBRE-1) fue de 227.79 Hz, mientras que la de la voz femenina (MUJER-2) alcanzó 447.75 Hz.
 Esto significa que la voz de la mujer vibra aproximadamente el doble de rápido que la del hombre. Esto quiere decir que la diferencia se debe a las características anatómicas de las cuerdas vocales de cada género: las de los hombres son más largas y gruesas, produciendo vibraciones más lentas y tonos más graves; mientras que las de las mujeres son más cortas y delgadas, generando una vibración más rápida y, por lo tanto, un tono más agudo.
 
-- ¿Qué otras diferencias notan en términos de brillo, media o intensidad?
+- ¿Qué otras diferencias notan en términos de brillo, media o intensidad?:
 En cuanto al brillo espectral y la frecuencia media, la voz masculina presentó valores de 2703.02 Hz, mientras que la femenina mostró 1653.18 Hz.
 Aunque normalmente las voces femeninas tienden a sonar más brillantes, en este caso el hombre tuvo un valor de brillo mayor. Esto puede deberse al tipo de emisión de voz o al esfuerzo vocal durante la grabación, que pudo realzar los armónicos superiores.
 Respecto a la intensidad o energía total, la voz femenina (2.09×10¹²) fue ligeramente superior a la del hombre (1.50×10¹²), lo cual indica que la grabación de la mujer tuvo una amplitud mayor o una proyección de voz más fuerte. En resumen, la voz masculina mostró mayor brillo, mientras que la voz femenina destacó por su energía e intensidad.
   
-- Redactar conclusiones sobre el comportamiento de la voz en hombres y mujeres a partir de los análisis realizados.
+- Redactar conclusiones sobre el comportamiento de la voz en hombres y mujeres a partir de los análisis realizados:
 1. La frecuencia fundamental es la característica clave entre géneros, siendo claramente más alta en las mujeres, lo que coincide con el tono más agudo percibido en sus voces.
 2. Las voces masculinas mostraron una mayor variabilidad en frecuencia y amplitud, reflejada en los valores más altos de jitter y shimmer. Esto sugiere una vibración general menos regular, probablemente por diferencias anatómicas o por la forma de producir el sonido.
 3. Las voces femeninas, fueron más estables, con menor jitter y shimmer, lo que las hace percibirse como más claras y uniformes.
 4. Tanto el brillo como la intensidad pueden variar por factores individuales como la técnica vocal, el esfuerzo y las condiciones del entorno, no siendo necesariamente exclusivos de un género.
 5. En general, se confirma que las voces femeninas tienen una vibración más rápida y estable, mientras que las masculinas tienden a tener tonos más graves y con mayor variación en sus ciclos vocales.
   
-- Discuta la importancia clínica del jitter y shimmer en el análisis de la voz.
+- Discuta la importancia clínica del jitter y shimmer en el análisis de la voz:
 El jitter y el shimmer son parámetros clínicos fundamentales para evaluar la calidad y estabilidad de la voz.
 1. El jitter mide las variaciones pequeñas en la frecuencia fundamental entre un ciclo de vibración y otro. Un valor elevado puede indicar alteraciones en el control muscular laríngeo o presencia de trastornos vocales, como disfonía, nódulos o fatiga vocal.
 2. El shimmer evalúa la variación en la amplitud de los ciclos. Un shimmer alto puede relacionarse con cierre glotal incompleto, irregularidades en las cuerdas vocales o problemas respiratorios durante la fonación.
