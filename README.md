@@ -203,6 +203,9 @@ voz_filtrada = lfilter(b_hombre, 1, data)
 ```
 ![SEÑAL DE VOZ HOMBRE FILTRADA](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/SE%C3%91AL%20DE%20VOZ%20HOMRE%20FILTRADA.PNG?raw=true)
 
+
+## Diagrama de flujo
+![Diagrama Parte B](https://github.com/TomasCobos-rgb/INFORME-3-LAB-SE-ALES/blob/main/IMAGENES/Beige%20Minimal%20Flowchart%20Infographic%20Graph%20(2).png?raw=true)
 ### PARTE B.2 
 #### PROCEDIMIENTO 
 ```python
